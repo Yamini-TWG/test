@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 properties(
         [parameters([
                 booleanParam(defaultValue: false, description: 'build branch', name: 'Branchname')
@@ -26,15 +28,15 @@ static def get_branch_type(String branch_name) {
 
 
 
-parallel(
-   "stream 1" : {
-                   node {
-                          echo 'Hello World'
-                        }
-                },
-   "stream 2" : { 
-                     node { 
-                           echo 'Hello World2'                                                       
-                          } 
-                   }
-          )
+//parallel(
+//   "stream 1" : {
+ //                  node {
+ //                         echo 'Hello World'
+//                        }
+//                },
+//   "stream 2" : { 
+ //                    node { 
+  //                         echo 'Hello World2'                                                       
+  //                        } 
+  //                 }
+   //       )
