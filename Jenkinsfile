@@ -6,7 +6,7 @@ parallel(
                 },
    "stream 2" : { 
                      node { 
-                           eho 'Hello World2'                                                       
+                           echo 'Hello World2'                                                       
                           } 
                    }
           )
