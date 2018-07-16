@@ -2,7 +2,7 @@
 
 properties(
         [parameters([
-                booleanParam(defaultValue: false, description: 'build branch', name: 'Branchname')
+                booleanParam(defaultValue: false, description: 'build branch', name: 'branch_name')
 				])]
 static def get_branch_type(String branch_name) {
     //Must be specified according to <flowInitContext> configuration of jgitflow-maven-plugin in pom.xml
