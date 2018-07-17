@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 
-env.PATH = '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:'
-env.LC_ALL='en_US.UTF-8'
-env.LANG='en_US.UTF-8'
+//env.PATH = '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:'
+//env.LC_ALL='en_US.UTF-8'
+//env.LANG='en_US.UTF-8'
 
 pipeline {
 	agent 'ios-mobile'
@@ -53,4 +53,5 @@ post {
 failure {
          echo 'unit test fail'
 	}
+}
 }
