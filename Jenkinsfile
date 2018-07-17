@@ -1,3 +1,4 @@
 node {
-   echo 'Hello World, I am branch test2'
+   echo 'Hello World, I am branch test'
+   echo "$(branch)"
 }
