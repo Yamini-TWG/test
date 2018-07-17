@@ -4,7 +4,7 @@
 //env.LANG='en_US.UTF-8'
 
 pipeline {
-	agent 'any'
+	agent any
 	stages {
 		stage('Checkout code') {
 			checkout scm
@@ -19,12 +19,12 @@ pipeline {
 post {
   success {
     input {
-      message "choose parameters"	
- 	  ok "deploy"
+      message 'choose parameters'	
+ 	  ok 'deploy'
 	  parameters {
-		choice(choices: 'app-store\nad-hoc\ndevelopment', description:'determines which type of provisioning profile is used.', name: 'buildExportMethod'),
-		choice(choices: 'development\ncontent\nstaging\nuat\nrelease', description: 'determines which app flavor/ build configuration is used.', name: 'environment'),
-		string(defaultValue: '0.9.9', description: 'sets the version number of the app', name: 'versionNumber'),
+		choice(choices: 'app-store\nad-hoc\ndevelopment', description:'determines which type of provisioning profile is used.', name: 'buildExportMethod')
+		choice(choices: 'development\ncontent\nstaging\nuat\nrelease', description: 'determines which app flavor/ build configuration is used.', name: 'environment')
+		string(defaultValue: '0.9.9', description: 'sets the version number of the app', name: 'versionNumber')
 		string(defaultValue: '1', description: 'sets the build number of the app', name: 'buildNumber')
               }
 		 }
