@@ -27,7 +27,8 @@ post {
 		string(defaultValue: '0.9.9', description: 'sets the version number of the app', name: 'versionNumber'),
 		string(defaultValue: '1', description: 'sets the build number of the app', name: 'buildNumber')
               }
-		 }		 
+		 }
+  }
 	stages {
 		stage ('Checkout code') {
 			checkout scm
