@@ -28,7 +28,6 @@ post {
 		string(defaultValue: '1', description: 'sets the build number of the app', name: 'buildNumber')
               }
 		 }
-  }
 	stages {
 		stage ('Checkout code') {
 			checkout scm
